@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  bot:
+    container_name: ctes_f5
+    restart: always
+    build: ../../
+     ports:
+      - '${PORT}:${PORT}'

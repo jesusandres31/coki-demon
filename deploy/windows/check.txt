@@ -1,0 +1,6 @@
+// check if process is running on a port
+netstat -ano | find "<PORT_NUM>"
+
+// kill process by PID
+taskkill /PID <PID> /F
+
