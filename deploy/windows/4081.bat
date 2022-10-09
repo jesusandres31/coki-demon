@@ -7,7 +7,7 @@ c:
 cd\
 
 :: here your path
-cd C:\Users\devli\Projects\my\calendar-wpp-node-ctesf5
+cd C:\Users\sistema\projects\coki-demon
 
 @npm start
 goto End
