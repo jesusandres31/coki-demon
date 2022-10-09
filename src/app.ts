@@ -43,7 +43,7 @@ export class App {
   async listen(): Promise<void> {
     var server = this.app.listen(this.app.get('port'));
     if (process.env.NODE_ENV === 'production') {
-      console.log('Production server on port', process.env.NODE_ENV);
+      console.log('Production server on port', this.app.get('port'));
     } else {
       console.log('Dev server on port', this.app.get('port'));
     }
