@@ -7,12 +7,12 @@ const router = Router();
  * Get enabled products.
  * @method get
  */
-router.route('/products').get(productCtrl.getProducts);
+router.route('/products').get(productCtrl.getAllProductsTest);
 
 /**
- * Get pdf products list.
+ * Search products.
  * @method get
  */
-router.route('/products/pdf').get(productCtrl.getProductsList);
+router.route('/products/:filter').get(productCtrl.searchProductsTest);
 
 export default router;

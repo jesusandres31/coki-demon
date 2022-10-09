@@ -63,3 +63,6 @@ session/
 
 # qe
 static/qr-code.svg
+
+# pdf 
+products.pdf

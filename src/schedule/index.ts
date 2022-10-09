@@ -9,7 +9,7 @@ const setupScheduler = async () => {
     CRON_EXPRESSION,
     async () => {
       try {
-        console.log('hello');
+        console.log('hello scheduler');
       } catch (e) {
         console.log(e);
       }

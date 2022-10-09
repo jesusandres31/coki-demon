@@ -6,6 +6,7 @@ import router from './routes';
 import { errorHandler } from './middlewares';
 import { setupScheduler } from './schedule';
 import { startWhatsApp } from './libs';
+import { setupWppMessages } from './whatsapp';
 
 export class App {
   private app: Application;
@@ -36,6 +37,7 @@ export class App {
   private async initialSetup() {
     await setupScheduler();
     await startWhatsApp();
+    await setupWppMessages();
   }
 
   async listen(): Promise<void> {
