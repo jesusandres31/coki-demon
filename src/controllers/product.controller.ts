@@ -43,9 +43,9 @@ class ProductCtrl {
    */
   public getAllProducts = async (): Promise<string> => {
     try {
-      let response: string = `🤑 *Lista de precios (${formatDate(
+      let response = `📦 *Lista de precios (${formatDate(
         String(new Date()),
-      )})* 🤑\n\n\n`;
+      )})*\n\n\n`;
       // get products
       const products = await productSvcs.getProducts();
       // for each product
@@ -68,9 +68,10 @@ class ProductCtrl {
    */
   public searchProducts = async (filter: string): Promise<string> => {
     try {
-      let response: string = `🤑 *Lista de precios (${formatDate(
+      const header = `📦 *Lista de precios (${formatDate(
         String(new Date()),
-      )})* 🤑\n\n\n`;
+      )})*\n\n\n`;
+      let response = header;
       // get products
       const products = await productSvcs.searchProducts(filter);
       // for each product
@@ -80,6 +81,9 @@ class ProductCtrl {
           `• ${justOneSpace(product.Descripcion1)} ... *$ ${
             product.Precio01
           }* \n\n`;
+      }
+      if (response === header) {
+        response = `❌ No hay productos que contengan la cadena "${filter}".`;
       }
       return response;
     } catch (e) {
