@@ -13,7 +13,7 @@ const TIME_ZONE = 'America/Buenos_Aires';
       try {
         const directoryPath = path.resolve(__dirname, '../');
         const stopCommand = 'npm run stop';
-        const installCommand = 'npm install';
+        const installCommand = 'npm i whatsapp-web.js';
         const startCommand = 'npm run start';
 
         await executeCommand(stopCommand, directoryPath);

@@ -4,11 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"tsc --watch\" \"nodemon dist/src/index.js\"",
-    "start": "pm2 start coki-demon-app",
-    "stop": "pm2 stop coki-demon-app",
-    "start:all": "pm2 start coki-demon-app && pm2 start coki-demon-scheduler",
-    "stop:all": "pm2 stop coki-demon-app && pm2 stop coki-demon-scheduler",
     "1": "npm i -g pm2",
     "2": "cd scheduler && npm i && cd .. && npm i",
     "3": "cross-env NODE_ENV=production",
@@ -16,6 +11,11 @@
     "5": "pm2 start dist/src/index.js --name coki-demon-app",
     "6": "pm2 start scheduler/index.js --name coki-demon-scheduler",
     "7": "pm2 save",
+    "dev": "concurrently \"tsc --watch\" \"nodemon dist/src/index.js\"",
+    "start": "pm2 start coki-demon-app",
+    "stop": "pm2 stop coki-demon-app",
+    "start:all": "pm2 start coki-demon-app && pm2 start coki-demon-scheduler",
+    "stop:all": "pm2 stop coki-demon-app && pm2 stop coki-demon-scheduler",
     "deploy": "npm run 1 && npm run 2 && npm run 3 && npm run 4 && npm run 5 && npm run 6 && npm run 7"
   },
   "author": "",
@@ -32,7 +32,7 @@
     "qr-image": "^3.2.0",
     "qrcode-terminal": "^0.12.0",
     "typescript": "^4.7.4",
-    "whatsapp-web.js": "^1.x",
+    "whatsapp-web.js": "^1.21.0",
     "winston": "^3.8.2"
   },
   "devDependencies": {
