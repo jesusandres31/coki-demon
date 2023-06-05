@@ -60,6 +60,7 @@ private/
 # whatsapp
 session/
 .wwebjs_auth/
+.wwebjs_cache/
 
 # qr
 static/qr-code.svg
