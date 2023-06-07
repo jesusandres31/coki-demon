@@ -6,4 +6,6 @@
 
 ## Deploy:
 
+npm run install:pm2
+
 npm run deploy

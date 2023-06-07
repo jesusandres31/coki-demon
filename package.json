@@ -4,17 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "1": "npm i -g pm2",
-    "2": "cd scheduler && npm i && cd .. && npm i",
-    "3": "cross-env NODE_ENV=production concurrently \"npx -p typescript tsc\" \"pm2 start dist/src/index.js --name coki-demon-app\"",
-    "4": "pm2 start scheduler/index.js --name coki-demon-scheduler",
-    "5": "pm2 save",
+    "install:pm2": "npm i -g pm2",
+    "1": "cd scheduler && npm i && cd .. && npm i",
+    "2": "cross-env NODE_ENV=production concurrently \"npx -p typescript tsc\" \"pm2 start dist/src/index.js --name coki-demon-app\"",
+    "3": "pm2 start scheduler/index.js --name coki-demon-scheduler",
+    "4": "pm2 save",
     "dev": "concurrently \"tsc --watch\" \"nodemon dist/src/index.js\"",
     "start": "pm2 start coki-demon-app",
     "stop": "pm2 stop coki-demon-app",
     "start:all": "pm2 start coki-demon-app && pm2 start coki-demon-scheduler",
     "stop:all": "pm2 stop coki-demon-app && pm2 stop coki-demon-scheduler",
-    "deploy": "npm run 1 && npm run 2 && npm run 3 && npm run 4 && npm run 5"
+    "deploy": "npm run 1 && npm run 2 && npm run 3 && npm run 4"
   },
   "author": "",
   "license": "ISC",
