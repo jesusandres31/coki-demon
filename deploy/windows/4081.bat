@@ -9,5 +9,5 @@ cd\
 :: here your path
 cd C:\Users\sistema\projects\coki-demon
 
-@npm start_
+@npm run start_
 goto End
