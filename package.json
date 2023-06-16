@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start_": "cross-env NODE_ENV=production concurrently \"tsc --watch\" \"node dist/src/index.js\"",
     "1": "cd scheduler && npm i && cd .. && npm i",
     "2": "cross-env NODE_ENV=production concurrently \"npx -p typescript tsc\" \"pm2 start dist/src/index.js --name coki-demon-app\"",
     "3": "pm2 start scheduler/index.js --name coki-demon-scheduler",
     "4": "pm2 save",
+    "start_": "cross-env NODE_ENV=production concurrently \"tsc --watch\" \"node dist/src/index.js\"",
     "install:pm2": "npm i -g pm2",
     "dev": "concurrently \"tsc --watch\" \"nodemon dist/src/index.js\"",
     "start": "pm2 start coki-demon-app",
