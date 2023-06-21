@@ -17,7 +17,7 @@ npm run deploy
 
 - run win+r `shell:startup`
 
-- copy direct access of `.vbs` fiile to `startup` folder
+- copy direct access of `.vbs` file to `startup` folder
 
 ### Utils:
 
