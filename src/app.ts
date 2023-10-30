@@ -35,7 +35,7 @@ export class App {
   }
 
   private async initialSetup() {
-    // await setupScheduler();
+    await setupScheduler();
     await startWhatsApp();
     await setupWppMessages();
   }

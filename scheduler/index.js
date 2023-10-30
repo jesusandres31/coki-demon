@@ -13,11 +13,15 @@ const TIME_ZONE = 'America/Buenos_Aires';
       try {
         const directoryPath = path.resolve(__dirname, '../');
         const stopCommand = 'npm run stop';
+        const gitPullCommand = 'git pull';
         const installCommand = 'npm i whatsapp-web.js';
         const startCommand = 'npm run start';
 
         await executeCommand(stopCommand, directoryPath);
         console.log('Aplicación detenida con éxito');
+
+        await executeCommand(gitPullCommand, directoryPath);
+        console.log('Código actualizado con éxito');
 
         await executeCommand(installCommand, directoryPath);
         console.log('Dependencias instaladas con éxito');
