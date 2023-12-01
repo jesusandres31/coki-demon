@@ -67,3 +67,6 @@ static/qr-code.svg
 
 # logs
 /logs
+
+# Private files 
+private/

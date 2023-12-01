@@ -8,10 +8,14 @@ const router = Router();
  */
 router.route('/test').get(async (req, res, next) => {
   try {
-    return res.status(200).json(req);
+    return res.status(200).json('response');
   } catch (e) {
     return next(e);
   }
 });
 
 export default router;
+
+/**
+ *
+ */
