@@ -23,7 +23,7 @@ npm run deploy
 
 ```shell
 # check if process is running on a port
-netstat -ano | find "<PORT_NUM>"
+netstat -ano | find "4081"
 ```
 
 ```shell
