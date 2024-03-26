@@ -30,3 +30,9 @@ netstat -ano | find "4081"
 # kill process by PID
 taskkill /PID <PID> /F
 ```
+
+# DEBUG:
+
+whatsapp web js Cache.js:34 const version = index Html.match(/manifest-([\d\\.]+)\.json/) TypeError: Cannot read properties of null (reading '1')
+https://github.com/pedroslopez/whatsapp-web.js/issues/2383
+I'm using LocalAuth managed to make it run again by deleting ".wwebjs_auth" and ".wwebjs_cache" folders, then logged in again... It's just a workaround not a fix.
