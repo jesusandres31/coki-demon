@@ -7,6 +7,11 @@ import qr from 'qr-image';
 const client = new Client({
   authStrategy: new LocalAuth(),
   puppeteer: { headless: true },
+  webVersionCache: {
+    type: 'remote',
+    remotePath:
+      'https://raw.githubusercontent.com/wppconnect-team/wa-version/main/html/2.2410.1.html',
+  },
 });
 
 export const startWhatsApp = async () => {
