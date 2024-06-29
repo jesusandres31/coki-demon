@@ -3,14 +3,31 @@ import { Client, LocalAuth } from 'whatsapp-web.js';
 import fs from 'fs';
 import config from '../config';
 import qr from 'qr-image';
+import path from 'path';
 
-const client = new Client({
+/* const client = new Client({
   authStrategy: new LocalAuth(),
   puppeteer: { headless: true },
   webVersionCache: {
     type: 'remote',
     remotePath:
       'https://raw.githubusercontent.com/wppconnect-team/wa-version/main/html/2.2410.1.html',
+  },
+}); */
+
+const wwebVersion = '2.2407.3';
+
+const client = new Client({
+  authStrategy: new LocalAuth({
+    dataPath: path.join(__dirname, '../../.wwebjs_cache'),
+  }),
+  puppeteer: {
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  },
+  webVersionCache: {
+    type: 'remote',
+    remotePath: `https://raw.githubusercontent.com/wppconnect-team/wa-version/main/html/${wwebVersion}.html`,
   },
 });
 
