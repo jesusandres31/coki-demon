@@ -1,4 +1,5 @@
 import { ErrorRequestHandler, NextFunction, Request, Response } from 'express';
+import { IHttpError } from '../types';
 
 /**
  * Global error handler.

@@ -1,4 +1,6 @@
-import { IContact } from './Contact';
-import { IProduct } from './Product';
-
-export { IContact, IProduct };
+export interface IProduct {
+  IdArt: string;
+  Codigo: string;
+  Descripcion1: string;
+  Precio01: string;
+}

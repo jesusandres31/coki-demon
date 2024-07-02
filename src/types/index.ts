@@ -1,3 +1,6 @@
-export type Calendar = 'fijo' | 'diario';
-
-export type Server = 'c.us' | 'g.us';
+export interface IHttpError {
+  code: string;
+  status: number;
+  message: string;
+  hint: string;
+}

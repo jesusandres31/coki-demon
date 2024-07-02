@@ -5,10 +5,8 @@ import config from './config';
 import router from './routes';
 import { errorHandler } from './middlewares';
 import { setupScheduler } from './schedule';
-import { startTelegram } from './libs/telegram';
-import { telegramCtlr } from './controllers/telegram.controller';
-// import { startWhatsApp } from './libs';
-// import { setupWppMessages } from './whatsapp';
+import { startTelegramBot } from './libs';
+import { setupBot } from './helper';
 
 export class App {
   private app: Application;
@@ -38,10 +36,8 @@ export class App {
 
   private async initialSetup() {
     setupScheduler();
-    startTelegram();
-    telegramCtlr();
-    // await startWhatsApp();
-    // await setupWppMessages();
+    startTelegramBot();
+    setupBot();
   }
 
   async listen(): Promise<void> {

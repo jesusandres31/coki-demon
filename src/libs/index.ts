@@ -1,5 +1,5 @@
-import client, { startWhatsApp } from './whatsapp';
 import access from './access';
 import logger from './logger';
+import bot, { startTelegramBot } from './telegram';
 
-export { client, startWhatsApp, access, logger };
+export { access, logger, bot, startTelegramBot };

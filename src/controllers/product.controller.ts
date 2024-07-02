@@ -56,6 +56,7 @@ class ProductCtrl {
             product.Precio01
           }* \n\n`;
       }
+
       return response;
     } catch (e) {
       logger.info(e);

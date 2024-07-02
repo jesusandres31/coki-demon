@@ -5,6 +5,6 @@ const bot = new Telegraf(TELEGRAM_TOKEN);
 
 export default bot;
 
-export const startTelegram = () => {
+export const startTelegramBot = () => {
   bot.launch();
 };
